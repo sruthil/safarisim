@@ -49,7 +49,7 @@ document.getElementById("viewCountriesBtn").addEventListener('click', ()=>{
 
 var kl = 0;
 
-let pdata = fetch('js/pricing.json')
+let pdata = fetch('/frontend/js/pricing.json')
     .then(response => response.json())
     .then(data=>{
     kl = data;

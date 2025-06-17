@@ -12,7 +12,7 @@ export default function Home() {
 
     const currencyPopulate = (cntry: string) => {
       console.log(cntry)
-      fetch("/js/pricing.json")
+      fetch("/frontend/js/pricing.json")
         .then((res) => res.json())
         .then((data) => {
           if (!countriesEl) return;
