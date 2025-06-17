@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,      // ✅ Ignores lint issues during build
+  },
 };
 
 export default nextConfig;
