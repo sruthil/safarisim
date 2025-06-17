@@ -295,7 +295,7 @@
                                 r = new p.Color(this.options.color),
                                 h = new p.Color(this.options.color2),
                                 a = r.clone().sub(n);
-                        this.rayCaster && this.rayCaster.setFromCamera(new p.Vector2(this.rcMouseX, this.rcMouseY), this.camera), this.linesMesh2 && (this.linesMesh2.rotation.z += .002, this.linesMesh2.rotation.x += 8e-4, this.linesMesh2.rotation.y += 5e-4), this.sphere && (this.sphere.rotation.y += .002, this.linesMesh3.rotation.y -= .004);
+                        this.rayCaster && this.rayCaster.setFromCamera(new p.Vector2(this.rcMouseX, this.rcMouseY), this.camera), this.linesMesh2 && (this.linesMesh2.rotation.z += .002, this.linesMesh2.rotation.x += 8e-4, this.linesMesh2.rotation.y += 5e-4), this.sphere && (this.sphere.rotation.y += .0002, this.linesMesh3.rotation.y -= .0004);
                         for (let t = 0; t < this.points.length; t++) {
                                 let e, h;
                                 const l = this.points[t];
@@ -335,7 +335,7 @@
 VANTA.GLOBE({
 el: "#globe",
 mouseControls: false,
-touchControls: true,
+touchControls: false,
 gyroControls: false,
 minHeight: 200.00,
 minWidth: 200.00,

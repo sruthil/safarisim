@@ -1,8 +1,31 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 
 export default function Header() {
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [step, setStep] = useState("email"); // 'email' or 'otp'
+  const [email, setEmail] = useState("");
+  const [otp, setOtp] = useState("");
+  const modalRef = useRef(null);
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+        setStep("email");
+        setEmail("");
+        setOtp("");
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen]);
+
+
   useEffect(() => {
     // Scroll effect
     const handleScroll = () => {
@@ -39,6 +62,7 @@ export default function Header() {
   }, []);
 
   return (
+    <>
     <header id="mainNav">
       <nav>
         <div className="container">
@@ -89,14 +113,43 @@ export default function Header() {
                 </a>
               </li>
               <li>
-                <a href="#" className="outlineBtn">
+                <button type="button" onClick={() => {setStep("email"); setIsOpen(true)}} className="outlineBtn">
                   Login
-                </a>
+                </button>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
+    
+      {isOpen && (
+        
+        <div className="modalBg">
+          <div className="modalWrapper" ref={modalRef}>
+            <h3 className="sectionHead">Login</h3>
+            <p className="small">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo dolores modi magnam.</p>
+            {step === "email" ? (
+              <>
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label text-dark">Enter your Email</label>
+                <input type="email" id="email" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} className="form-control" />
+              </div>
+                <button onClick={() => setStep("otp")} className="mainBtn">Get OTP</button>
+              </>
+            ) : (
+              <>
+              <div className="mb-3">
+                <label htmlFor="otp" className="form-label text-dark">Enter OTP</label>
+                <input type="text" id="otp" placeholder="Enter OTP" value={otp} onChange={(e) => setOtp(e.target.value)} className="form-control"/>
+              </div>
+                <button onClick={() => console.log("Login with", { email, otp })} className="mainBtn">Login</button>
+              </>
+            )}
+            <button onClick={() => setIsOpen(false)} className="close-btn" title="close-popup"><i className="fa-solid fa-times"></i></button>
+          </div>
+        </div>
+      )}
+      </>
   );
 }

@@ -182,7 +182,7 @@ body{
         background-repeat: repeat-x;
         background-size: 250vw;
         background-position-y: bottom;
-        animation: clouds 60s linear infinite;
+        animation: clouds 600s linear infinite;
     }
     .cloud-fg{
         position: absolute;
@@ -195,7 +195,7 @@ body{
         background-repeat: repeat-x;
         background-size: 250vw;
         background-position-y: bottom;
-        animation: clouds 50s linear infinite;
+        animation: clouds 500s linear infinite;
     }
     #globe{
         position: absolute;
@@ -678,6 +678,44 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+.modalBg{
+    position: fixed;
+    z-index: 1040;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: grid;
+    place-content: center;
+    background-color: rgba($color: $blackk, $alpha: 0.5);
+    backdrop-filter: blur(20px);
+    .modalWrapper{
+        background-color: $white;
+        padding: 20px;
+        padding-top: 40px;
+        width: 400px;
+        max-width: 90vw;
+        border-radius: 30px;
+        position: relative;
+    }
+    .close-btn{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background-color: $lgrey;
+        color: $darkBlue;
+        border-radius: 20px;
+        right: 10px;
+        top: 10px;
+        transition: .3s all ease;
+        &:hover{
+            background-color: $bluee;
+            color: $white;
+        }
+    }
 }
 
 @media(max-width: 991px){
