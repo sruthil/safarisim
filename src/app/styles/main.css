@@ -397,6 +397,11 @@ body {
   color: #ffffff;
   border-color: #2D93E6;
 }
+.mainBtn.second {
+  background-color: #D9D9D9;
+  border-color: #D9D9D9;
+  color: #2D93E6;
+}
 
 .sectionHead {
   font-size: 40px;
@@ -681,6 +686,90 @@ footer .copy .container {
 .modalBg .close-btn:hover {
   background-color: #2D93E6;
   color: #ffffff;
+}
+
+.adminNav {
+  margin-left: 300px;
+  width: calc(100% - 300px);
+  height: 65px;
+  position: sticky;
+  top: 0;
+  background-color: #f5f5f5;
+}
+.adminNav .container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 10px;
+}
+.adminNav .container-fluid .navList {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  gap: 30px;
+  margin-left: 30px;
+}
+.adminNav .navbtn {
+  padding: 10px 15px;
+}
+
+.adminSideNav {
+  width: 300px;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #f5f5f5;
+}
+.adminSideNav .navLogo {
+  display: grid;
+  background-color: #B8CBDB;
+  padding: 10px 20px;
+  height: 65px;
+}
+.adminSideNav .navLogo img {
+  max-width: 120px;
+}
+.adminSideNav ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+.adminSideNav ul li a {
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  color: #696969;
+}
+.adminSideNav ul li a i {
+  color: #154974;
+  margin-right: 10px;
+}
+.adminSideNav ul li:not(:last-child) {
+  border-bottom: 1px solid #D9D9D9;
+}
+.adminSideNav ul li.active a {
+  background-color: #2D93E6;
+  color: #ffffff;
+}
+.adminSideNav ul li.active a i {
+  color: #ffffff;
+}
+
+.adminMain {
+  width: calc(100% - 300px);
+  margin-left: 300px;
+  min-height: calc(100svh - 110px);
+  padding: 20px;
+}
+
+.adminFooter {
+  padding: 10px;
+  width: calc(100% - 300px);
+  margin-left: 300px;
+  border-top: 1px solid #D9D9D9;
+  text-align: center;
 }
 
 @media (max-width: 991px) {

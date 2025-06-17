@@ -436,6 +436,11 @@ body{
         color: $white;
         border-color: $bluee;
     }
+    &.second{
+        background-color: $lgrey;
+        border-color: $lgrey;
+        color: $bluee;
+    }
 }
 
 .sectionHead{
@@ -716,6 +721,92 @@ footer{
             color: $white;
         }
     }
+}
+
+.adminNav{
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    height: 65px;
+    position: sticky;
+    top: 0;
+    background-color: $whitegrey;
+    .container-fluid{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: 10px;
+        .navList{
+            display: flex;
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            gap: 30px;
+            margin-left: 30px;
+        }
+    }
+    .navbtn{
+        padding: 10px 15px;
+    }
+}
+
+.adminSideNav{
+    width: 300px;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: $whitegrey;
+    .navLogo{
+        display: grid;
+        background-color: $lblue;
+        padding: 10px 20px;
+        height: 65px;
+        img{
+            max-width: 120px;
+        }
+    }
+    ul{
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style-type: none;
+        li{
+            a{
+                padding: 20px;
+                display: block;
+                text-decoration: none;
+                color: $tcolor;
+                i{
+                    color: $darkBlue;
+                    margin-right: 10px;
+                }
+            }
+            &:not(:last-child){
+                border-bottom: 1px solid $lgrey;
+            }
+            &.active a{
+                background-color: $bluee;
+                color: $white;
+                i{
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.adminMain{
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    min-height: calc(100svh - 110px);
+    padding: 20px;
+}
+
+.adminFooter{
+    padding: 10px;
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    border-top: 1px solid $lgrey;
+    text-align: center;
 }
 
 @media(max-width: 991px){

@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
+import { BASE_URL } from "@/utils/baseUrl";
+const baseUrl = `${BASE_URL}`;
 
 export default function Header() {
 
@@ -67,7 +69,7 @@ export default function Header() {
       <nav>
         <div className="container">
           <a href="#" className="navLogo">
-            <img src="./dark-logo.svg" alt="logo" className="img-fluid" />
+            <img src={baseUrl+"/logo-dark-color.svg"} alt="logo" className="img-fluid" />
           </a>
           <button
             type="button"
@@ -98,9 +100,9 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="navLink">
+                <Link href="/" className="navLink">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="navLink">
