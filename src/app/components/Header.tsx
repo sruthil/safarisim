@@ -156,7 +156,7 @@ export default function Header() {
       description: "Credit added via demo purchase",
     };
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/add-subscriber-credit`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/telco/add-subscriber-credit`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
