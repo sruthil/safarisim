@@ -1,6 +1,8 @@
 "use client";
 import { useEffect } from 'react';
 import Globe from './components/Globe';
+import { BASE_URL } from "@/utils/baseUrl";
+const baseUrl = `${BASE_URL}`;
 
 export default function Home() {
   
@@ -22,7 +24,7 @@ export default function Home() {
             div.className = "col-lg-4 col-md-6";
             div.innerHTML = `
               <div class="countryName">
-                <img src="./frontend/countries/${item.image}.png" alt="${item.title}" />
+                <img src="${baseUrl}/countries/${item.image}.png" alt="${item.title}" />
                 <h6>${item.title}</h6>
               </div>
               <div class="gbPrice">${item[cntry]}</div>

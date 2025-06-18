@@ -1,5 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
+import { BASE_URL } from "@/utils/baseUrl";
+const baseUrl = `${BASE_URL}`;
 
 export default function Footer() {
     const [year, setYear] = useState<number | null>(null);
@@ -14,7 +16,7 @@ export default function Footer() {
             <div className="container">
                 <div className="row">
                     <div className="logoSection col-lg-4">
-                        <img src="./frontend/logo-dark-color.svg" alt="logo"/>
+                        <img src={baseUrl+"/logo-dark-color.svg"} alt="logo"/>
                         <p>Stay connected worldwide with our eSIM solutions. No roaming charges, just simple connectivity.</p>
                         <ul className="socialList">
                             <li><a title="facebook" href=""><i className="fa-brands fa-facebook-f"></i></a></li>

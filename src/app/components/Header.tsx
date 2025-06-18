@@ -2,6 +2,8 @@
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { toast } from 'react-toastify';
+import { BASE_URL } from "@/utils/baseUrl";
+const baseUrl = `${BASE_URL}`;
 
 export default function Header() {
 
@@ -143,7 +145,7 @@ const [isLoggedIn, setIsLoggedIn] = useState(false);
       <nav>
         <div className="container">
           <a href="#" className="navLogo">
-            <img src="./frontend/dark-logo.svg" alt="logo" className="img-fluid" />
+            <img src={baseUrl+"/logo-dark-color.svg"} alt="logo" className="img-fluid" />
           </a>
           <button
             type="button"
@@ -174,9 +176,9 @@ const [isLoggedIn, setIsLoggedIn] = useState(false);
                 </Link>
               </li>
               <li>
-                <a href="#" className="navLink">
+                <Link href="/" className="navLink">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="navLink">
