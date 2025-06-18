@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="container">
                 <div className="row">
                     <div className="logoSection col-lg-4">
-                        <img src="./logo-dark-color.svg" alt="logo"/>
+                        <img src="./frontend/logo-dark-color.svg" alt="logo"/>
                         <p>Stay connected worldwide with our eSIM solutions. No roaming charges, just simple connectivity.</p>
                         <ul className="socialList">
                             <li><a title="facebook" href=""><i className="fa-brands fa-facebook-f"></i></a></li>

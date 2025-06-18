@@ -22,7 +22,7 @@ export default function Home() {
             div.className = "col-lg-4 col-md-6";
             div.innerHTML = `
               <div class="countryName">
-                <img src="./countries/${item.image}.png" alt="${item.title}" />
+                <img src="./frontend/countries/${item.image}.png" alt="${item.title}" />
                 <h6>${item.title}</h6>
               </div>
               <div class="gbPrice">${item[cntry]}</div>
