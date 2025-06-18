@@ -161,6 +161,7 @@ export default function Header() {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
+          Authorization: `Bearer ${localStorage.getItem("authToken")}`,
         },
         body: JSON.stringify({ ...postData }),
       });
