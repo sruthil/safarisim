@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import { BASE_URL } from "@/utils/baseUrl";
-const baseUrl = `${BASE_URL}`;
+import { getBaseUrl } from "@/utils/baseUrl";
+const baseUrl = getBaseUrl();
 
 export default function Footer() {
     const [year, setYear] = useState<number | null>(null);

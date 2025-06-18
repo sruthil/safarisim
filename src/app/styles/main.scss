@@ -178,7 +178,7 @@ body{
         width: 100%;
         height: 100%;
         z-index: 0;
-        background-image: url(../../../public/cloud-bg.png);
+        background-image: url(/frontend/cloud-bg.png);
         background-repeat: repeat-x;
         background-size: 250vw;
         background-position-y: bottom;
@@ -191,7 +191,7 @@ body{
         width: 100%;
         height: 100%;
         z-index: 1;
-        background-image: url(../../../public/cloud-fg.png);
+        background-image: url(/frontend/cloud-fg.png);
         background-repeat: repeat-x;
         background-size: 250vw;
         background-position-y: bottom;
@@ -315,7 +315,7 @@ body{
         position: absolute;
         width: 64px;
         height: 64px;
-        background-image: url(../../../public/sim-corner.svg);
+        background-image: url(/frontend/sim-corner.svg);
         background-size: cover;
         right: 0;
         bottom: 0;

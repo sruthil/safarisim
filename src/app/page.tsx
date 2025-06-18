@@ -1,8 +1,8 @@
 "use client";
 import { useEffect } from 'react';
 import Globe from './components/Globe';
-import { BASE_URL } from "@/utils/baseUrl";
-const baseUrl = `${BASE_URL}`;
+import { getBaseUrl } from "@/utils/baseUrl";
+const baseUrl = getBaseUrl();
 
 export default function Home() {
   
@@ -136,7 +136,7 @@ export default function Home() {
                 </div>
             </div>
         </section>
-        <section id="plan" className="sectionPad">
+        <section id="plan" className="sectionPad d-none">
             <div className="container">
                 <h3 className="sectionHead center"><span>SafariSim</span> Plans and  Pricing</h3>
                 <div className="tabBtns">
